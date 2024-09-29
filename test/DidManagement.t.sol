@@ -38,4 +38,17 @@ contract DecentralizedIdentityTest is Test {
         bytes32 storedClaim = did.getClaim(address(this), "age");
         assertEq(storedClaim, 0x0);
     }
+
+    // function testIsUserAbove18() public {
+    //     did.createDID();
+    //     bytes32 birthdateHash = keccak256(abi.encodePacked(uint256(1072915200))); // Unix timestamp for Jan 1, 2004
+
+    //     did.addClaim("birthdate", birthdateHash);
+
+    //     //  Fast forward to a date that would make the user over 18 years old
+    //     uint256 currentDate = 1640995200; // Jan 1, 2022 (18 years old)
+    //     bool result = did.isuserAbove18(address(this), currentDate);
+
+    //     assertTrue(result);
+    // }
 }
